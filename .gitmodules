@@ -1,0 +1,3 @@
+[submodule "webly"]
+	path = webly
+	url = https://github.com/alramdein/webly.git
