@@ -1,10 +1,11 @@
 # alramdein.github.io
 
-This repo used to make my projects live. Alramdein is an internet persona or online identity from Alif Ramdani.
+This repo used to make my projects live. <br/>
+*Alramdein is an internet persona or online identity for Alif Ramdani.*
 
 # Live
 
-Webly live on: alramdein.github.io/webly
+Webly live on: https://alramdein.github.io/webly
 
 # Author
 
