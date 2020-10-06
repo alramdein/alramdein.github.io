@@ -3,4 +3,4 @@
 	url = https://github.com/alramdein/webly.git
 [submodule "covid-19-stats-live"]
 	path = covid-19-stats-live
-	url = https://github.com/alramdein/covid-19-stats-live
+	url = https://github.com/alramdein/covid-19-stats-live.git
