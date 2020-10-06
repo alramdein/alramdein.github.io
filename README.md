@@ -5,7 +5,8 @@ This repo used to make my projects live. <br/>
 
 # Live
 
-Webly live on: https://alramdein.github.io/webly
+1. Webly live on: https://alramdein.github.io/webly <br/>
+2. COVID-19-Stats live on: https://alramdein.github.io/covid-19-stats-live
 
 # Author
 
