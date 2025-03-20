@@ -5,16 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alif Ramdani - Software Engineer</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
-        header, section, footer { margin-bottom: 20px; }
-        h1, h2 { color: #333; }
-        a { color: #0073e6; text-decoration: none; }
-        .container { max-width: 800px; margin: auto; }
+        :root {
+            --primary-color: #00A8E8;
+            --text-color: #E0E0E0;
+            --bg-color: #121212;
+            --card-bg: #1E1E1E;
+            --border-radius: 10px;
+            --transition: all 0.3s ease-in-out;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            text-align: left;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        p, li {
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background: var(--card-bg);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        li:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ul.bullet-list {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
+            <img src="https://alramdein.github.io/profile.jpg" alt="Alif Ramdani">
             <h1>Alif Ramdani</h1>
             <p>Software Engineer | Go & Node.js Enthusiast | AI & Security Enthusiast</p>
         </header>
@@ -27,23 +130,19 @@
         <section id="experience">
             <h2>Experience</h2>
             <ul>
-                <li><strong>Research & Development Engineer, Jubelio (08/2024 - Present)</strong><br>
-                    AI-powered sales forecasting, API Gateway design, and platform standardization.
+                <li><strong>Research & Development Engineer, Jubelio (08/2024 - Present)</strong>
+                    <ul class="bullet-list">
+                        <li>AI-powered sales forecasting</li>
+                        <li>API Gateway design</li>
+                        <li>Platform standardization</li>
+                    </ul>
                 </li>
-                <li><strong>Golang Instructor, Hacktiv8 (01/2024 - Present)</strong><br>
-                    Teaching Go fundamentals, REST API best practices, and microservices development.
-                </li>
-                <li><strong>Backend Engineer, Waresix (03/2023 - 03/2024)</strong><br>
-                    Optimized database queries, enhanced security, and improved testing coverage.
-                </li>
-                <li><strong>Backend Engineer, Kumparan (08/2021 - 12/2022)</strong><br>
-                    Migrated monolithic services to microservices, improved API performance, and led interns.
-                </li>
-                <li><strong>Freelance Fullstack Engineer, Upwork (11/2021 - 11/2021)</strong><br>
-                    Developed a real-time chat web application using Node.js, PostgreSQL, and React.js.
-                </li>
-                <li><strong>Backend Engineer, Telkom Indonesia (11/2020 - 08/2021)</strong><br>
-                    Developed Delivery Order API processing IoT data, integrated with external services via Kafka.
+                <li><strong>Golang Instructor, Hacktiv8 (01/2024 - Present)</strong>
+                    <ul class="bullet-list">
+                        <li>Teaching Go fundamentals</li>
+                        <li>REST API best practices</li>
+                        <li>Microservices development</li>
+                    </ul>
                 </li>
             </ul>
         </section>
@@ -53,7 +152,6 @@
             <ul>
                 <li><strong>Commit AI Generator</strong> - Automated commit message generator based on git diffs.</li>
                 <li><strong>Release Management Tool</strong> - Simplified release process for multiple teams.</li>
-                <li><strong>GoArch</strong> - Project template generator for Go.</li>
             </ul>
         </section>
         
