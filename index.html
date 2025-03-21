@@ -118,6 +118,28 @@
             border-radius: var(--border-radius);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
+        .experience-title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .company-link {
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        #contact {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            transition: var(--transition);
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -125,7 +147,7 @@
         <header>
             <img src="https://alramdein.github.io/profile.jpg" alt="Alif Ramdani">
             <h1>Alif Ramdani</h1>
-            <p>Software Engineer | Go, Typescript, and Python</p>
+            <p>Software Engineer | Go, Typescript, Python</p>
         </header>
         
         <section id="about">
@@ -148,7 +170,11 @@
         <section id="experience">
             <h2>Experience</h2>
             <ul>
-                <li><strong>Research & Development Engineer, Jubelio (08/2024 - Present)</strong>
+                <li> <div class="experience-title">
+                        <strong>Research & Development Engineer, Jubelio</strong>
+                        <span>(08/2024 - Present)</span>
+                        <a href="https://jubelio.com" class="company-link" target="_blank">jubelio.com</a>
+                    </div>
                     <ul class="bullet-list">
                         <li>Researched and implemented an <b>AI-powered sales forecasting</b> project to
                             enhance inventory planning and decision-making.</li>
@@ -164,14 +190,22 @@
                         <li>Developed internal tools to streamline workflows, including: Commit AI Generator and Release Management Tool</li>
                     </ul>
                 </li>
-                <li><strong>Golang Instructor, Hacktiv8 (01/2024 - Present)</strong>
+                <li> <div class="experience-title">
+                        <strong>Golang Instructor, Hacktiv8</strong>
+                        <span>(01/2024 - Present)</span>
+                        <a href="https://hacktiv8.com" class="company-link" target="_blank">hacktiv8.com</a>
+                    </div>
                     <ul class="bullet-list">
                         <li>Teaching Go/Golang fundamentals, REST API best practices,
                             and microservices development through deployment. In 2025*,
                             instructed at Hacktiv8 and KodingGo.</li>
                     </ul>
                 </li>
-                <li><strong>Backend Engineer, Waresix (03/2023 - 03/2024)</strong>
+                <li> <div class="experience-title">
+                        <strong>Backend Engineer, Waresix</strong>
+                        <span>(03/2023 - 03/2024)</span>
+                        <a href="https://waresix.com" class="company-link" target="_blank">waresix.com</a>
+                    </div>
                     <ul class="bullet-list">
                         <li>Optimized database queries, reducing execution time from 878.67ms to 0.66ms, enhancing app speed.</li>
                         <li>Increased the amount of code tested from 20% to 60%,
@@ -179,7 +213,11 @@
                         <li>Enhanced system security to mitigate DDoS attacks.</li>   
                     </ul>
                 </li>
-                <li><strong>Backend Engineer, Kumparan (08/2021 - 12/2022)</strong>
+                <li> <div class="experience-title">
+                        <strong>Backend Engineer, Kumparan</strong>
+                        <span>(08/2021 - 12/2022)</span>
+                        <a href="https://kumparan.com" class="company-link" target="_blank">kumparan.com</a>
+                    </div>
                     <ul class="bullet-list">
                         <li>Improve the API performance to ~200ms by improving the
                             cache mechanism.</li>
