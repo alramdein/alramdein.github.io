@@ -140,6 +140,59 @@
             transition: var(--transition);
             text-align: center;
         }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+    
+        .project {
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+    
+        .project:hover {
+            transform: translateY(-5px);
+        }
+    
+        .project:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    
+        .project img {
+            width: 150px;
+            height: 150px;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            margin: 0 20px;
+        }
+    
+        .project-content {
+            flex: 1;
+        }
+    
+        .tech-stack {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+    
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .project img {
+                margin: 0 0 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -151,8 +204,8 @@
         </header>
         
         <section id="about">
-            <h2>About Me</h2>
-            <p>Enthusiastic software engineer with over 4
+            <h2>Summary</h2>
+            <p>Enthusiastic software engineer with over 4+
                 years of experience, proficient in Go/Golang,
                 Typescript, and Python. A fast-paced learner with a proven
                 track record in building large-scale web
@@ -192,13 +245,13 @@
                 </li>
                 <li> <div class="experience-title">
                         <strong>Golang Instructor, Hacktiv8</strong>
-                        <span>(01/2024 - Present)</span>
+                        <span>(01/2025 - 04/2025)</span>
                         <a href="https://hacktiv8.com" class="company-link" target="_blank">hacktiv8.com</a>
                     </div>
                     <ul class="bullet-list">
                         <li>Teaching Go/Golang fundamentals, REST API best practices,
-                            and microservices development through deployment. In 2025*,
-                            instructed at Hacktiv8 and KodingGo.</li>
+                            and microservices development through deployment. In 2024, I also
+                            instructed at KodingGo.</li>
                     </ul>
                 </li>
                 <li> <div class="experience-title">
@@ -232,17 +285,59 @@
                             and scalable services to boost the business.</li>         
                     </ul>
                 </li>
+                <li> <div class="experience-title">
+                    <strong>Backend Engineer, Telkom Indonesia</strong>
+                    <span>(11/2020 - 08/2021)</span>
+                    <a href="https://kumparan.com" class="company-link" target="_blank">kumparan.com</a>
+                </div>
+                <ul class="bullet-list">
+                    <li>Develop Delivery Order API that processes IoT device data
+                        like geolocation, temperature, door sensor, and SOS sensor.
+                        And integrates it with the external party by utilizing Message
+                        Queue technology.</li>     
+                </ul>
+            </li>
             </ul>
         </section>
         
         <section id="projects">
             <h2>Projects</h2>
-            <ul>
-                <li><strong>Commit AI Generator</strong> - Automated commit message generator based on git diffs.</li>
-                <li><strong>Release Management Tool</strong> - Simplified release process for multiple teams.</li>
-            </ul>
+            <div class="projects">
+                <div class="project">
+                    <img src="https://alramdein.github.io/assets/warehouse.png" alt="Data Warehouse Project">
+                    <div class="project-content">
+                        <h3>Data Warehouse Project</h3>
+                        <p>This Data Warehouse Project leverages Kafka, Windmill, ClickHouse, and MongoDB to streamline real-time sales data processing and classification. Change Data Capture (CDC) feeds transactional updates into Kafka, triggering Windmill workflows that collect, transform, and classify sales data. Clean and dirty data are stored in ClickHouse for analytics, while dirty data variables are tracked in MongoDB. A classifier fetches and processes dirty data, applying an AI model for classification, with low-confidence results exported to S3 for review. This pipeline ensures efficient data transformation, real-time insights, and scalable analytics for business intelligence.</p>
+                        <p class="tech-stack">Tech Stack: Typescript, Kafka, CDC, Windmill, ClickHouse, MongoDB, Python</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://alramdein.github.io/assets/forecast.png" alt="AI Sales Forecasting">
+                    <div class="project-content">
+                        <h3>AI Sales Forecasting</h3>
+                        <p> This AI Sales Forecasting project uses Python and explores multiple machine learning models, such as AutoARIMA and XGBoost, to predict future sales. The project aims to improve forecasting accuracy by experimenting with different algorithms and incorporating relevant features like discounts and quantities. You are working with MindsDB to deploy and query these models efficiently. Additionally, you are considering approaches for handling multi-tenant sales forecasting, evaluating whether to use separate models per tenant or optimize a unified approach.</p>
+                        <p class="tech-stack">Tech Stack: Python, Statsforecast, PostgreSQL</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://alramdein.github.io/assets/merge.png" alt="Commit AI Generator">
+                    <div class="project-content">
+                        <h3>Commit AI Generator</h3>
+                        <p>Automated commit message generator based on git diffs.</p>
+                        <p class="tech-stack">Tech Stack: Golang, OpenAI API, Git Hooks</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://alramdein.github.io/assets/release.png" alt="Release Management Tool">
+                    <div class="project-content">
+                        <h3>Release Management Tool</h3>
+                        <p>Simplified release process for multiple teams.</p>
+                        <p class="tech-stack">Tech Stack: Python, Flask, PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        
+
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:ramdanialif26@gmail.com">ramdanialif26@gmail.com</a></p>
