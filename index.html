@@ -185,12 +185,16 @@
     
         @media (max-width: 768px) {
             .project {
-                flex-direction: column;
+                flex-direction: column !important;
                 text-align: center;
             }
-    
+
+            .project:nth-child(even) {
+                flex-direction: column !important; 
+            }
+        
             .project img {
-                margin: 0 0 10px 0;
+                margin: 0 0 10px 0 !important; 
             }
         }
     </style>
