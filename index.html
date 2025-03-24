@@ -1,412 +1,619 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="https://alramdein.github.io/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <title>Alif Ramdani - Software Engineer</title>
-    <style>
-        :root {
-            --primary-color: #00A8E8;
-            --text-color: #E0E0E0;
-            --bg-color: #121212;
-            --card-bg: #1E1E1E;
-            --border-radius: 10px;
-            --transition: all 0.3s ease-in-out;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://alramdein.github.io/favicon.png"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Alif Ramdani - Software Engineer</title>
+        <style>
+            :root {
+                --primary-color: #00a8e8;
+                --text-color: #e0e0e0;
+                --bg-color: #121212;
+                --card-bg: #1e1e1e;
+                --border-radius: 10px;
+                --transition: all 0.3s ease-in-out;
+            }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+            body {
+                font-family: "Inter", sans-serif;
+                background: var(--bg-color);
+                color: var(--text-color);
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
 
-        .container {
-            max-width: 800px;
-            width: 90%;
-            padding: 20px;
-            text-align: left;
-            margin: 50px auto;
-        }
+            .container {
+                max-width: 800px;
+                width: 90%;
+                padding: 20px;
+                text-align: left;
+                margin: 50px auto;
+            }
 
-        h1, h2 {
-            color: var(--primary-color);
-        }
+            h1,
+            h2 {
+                color: var(--primary-color);
+            }
 
-        p, li {
-            line-height: 1.6;
-        }
+            p,
+            li {
+                line-height: 1.6;
+            }
 
-        header {
-            padding: 20px;
-            border-radius: var(--border-radius);
-            background: var(--card-bg);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            text-align: center;
-        }
+            header {
+                padding: 20px;
+                border-radius: var(--border-radius);
+                background: var(--card-bg);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                margin-bottom: 20px;
+                text-align: center;
+            }
 
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
+            header img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
 
-        .navbar {
-            position: fixed; /* Keep it fixed at the top */
-            top: 0;
-            left: 0;
-            right: 0; /* Extend full width */
-            background: var(--card-bg);
-            padding: 15px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000; /* Ensure it's above other content */
-        }
+            .navbar {
+                position: fixed; /* Keep it fixed at the top */
+                top: 0;
+                left: 0;
+                right: 0; /* Extend full width */
+                background: var(--card-bg);
+                padding: 15px 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                z-index: 1000; /* Ensure it's above other content */
+            }
 
-        .navbar a {
-            color: var(--primary-color);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: background-color var(--transition), transform var(--transition);
-        }
+            .navbar a {
+                color: var(--primary-color);
+                text-decoration: none;
+                margin: 0 15px;
+                font-weight: 600;
+                transition: background-color var(--transition),
+                    transform var(--transition);
+            }
 
-        .navbar a:hover {
-            color: rgba(255, 255, 255, 1);
-            border-radius: var(--border-radius); /* Add border radius for smooth edges */
-            transform: scale(1.1); /* Slightly increase the size */
-            text-decoration: none;
-        }
+            .navbar a:hover {
+                color: rgba(255, 255, 255, 1);
+                border-radius: var(
+                    --border-radius
+                ); /* Add border radius for smooth edges */
+                transform: scale(1.1); /* Slightly increase the size */
+                text-decoration: none;
+            }
 
-        #summary p {
-            text-align: justify;
-        }
-
-        section {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            transition: var(--transition);
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 10px 0;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-        }
-
-        li:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        ul.bullet-list {
-            list-style: disc;
-            padding-left: 20px;
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-            transition: var(--transition);
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9rem;
-            background: var(--card-bg);
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .experience-title {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .company-link {
-            margin-top: 5px;
-            font-size: 0.9rem;
-            color: var(--primary-color);
-        }
-
-        #contact {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .projects {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-    
-        .project {
-            display: flex;
-            align-items: center;
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: var(--transition);
-        }
-    
-        .project:hover {
-            transform: translateY(-5px);
-        }
-    
-        .project:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-    
-        .project img {
-            width: 150px;
-            height: 150px;
-            border-radius: var(--border-radius);
-            object-fit: cover;
-            margin: 0 20px;
-        }
-    
-        .project-content {
-            flex: 1;
-        }
-    
-        .tech-stack {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: var(--primary-color);
-        }
-    
-        @media (max-width: 768px) {
-            .project {
-                flex-direction: column !important;
+            #summary p {
                 text-align: justify;
             }
 
+            section {
+                background: var(--card-bg);
+                padding: 20px;
+                border-radius: var(--border-radius);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                margin-bottom: 20px;
+                transition: var(--transition);
+            }
+
+            section:hover {
+                transform: translateY(-5px);
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li {
+                margin: 10px 0;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: var(--border-radius);
+                transition: var(--transition);
+            }
+
+            li:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            ul.bullet-list {
+                list-style: disc;
+                padding-left: 20px;
+            }
+
+            a {
+                color: var(--primary-color);
+                text-decoration: none;
+                font-weight: bold;
+                transition: var(--transition);
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            footer {
+                text-align: center;
+                padding: 10px;
+                font-size: 0.9rem;
+                background: var(--card-bg);
+                border-radius: var(--border-radius);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .experience-title {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .company-link {
+                margin-top: 5px;
+                font-size: 0.9rem;
+                color: var(--primary-color);
+            }
+
+            #contact {
+                background: var(--card-bg);
+                padding: 20px;
+                border-radius: var(--border-radius);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                margin-bottom: 20px;
+                transition: var(--transition);
+                text-align: center;
+            }
+
+            .projects {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .project {
+                display: flex;
+                align-items: center;
+                background: var(--card-bg);
+                padding: 20px;
+                border-radius: var(--border-radius);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                transition: var(--transition);
+            }
+
+            .project:hover {
+                transform: translateY(-5px);
+            }
+
             .project:nth-child(even) {
-                flex-direction: column !important; 
+                flex-direction: row-reverse;
             }
-        
+
             .project img {
-                margin: 0 0 10px 0 !important; 
+                width: 150px;
+                height: 150px;
+                border-radius: var(--border-radius);
+                object-fit: cover;
+                margin: 0 20px;
             }
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <div>
-            <a href="#summary">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
 
-    <div class="container">
-        <header>
-            <img src="https://alramdein.github.io/profile.jpg" alt="Alif Ramdani">
-            <h1>Alif Ramdani</h1>
-            <p>Software Engineer | Go, Typescript, Python</p>
-        </header>
-        
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>Enthusiastic software engineer with over 4+
-                years of experience, proficient in Go/Golang,
-                Typescript, and Python. A fast-paced learner with a proven
-                track record in building large-scale web
-                applications and services. Experienced in
-                architecting and developing robust
-                microservices from scratch using PostgreSQL,
-                Redis, Kafka, and Kubernetes. Passionate about
-                AI-driven solutions, with hands-on experience in
-                implementing statistical forecasting models for
-                sales prediction. Also, an active Golang
-                instructor, sharing knowledge and mentoring
-                developers to deepen their expertise in Go.</p>
-        </section>
-        
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li> <div class="experience-title">
-                        <strong>Research & Development Engineer, Jubelio</strong>
-                        <span>(08/2024 - Present)</span>
-                        <a href="https://jubelio.com" class="company-link" target="_blank">jubelio.com</a>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Researched and implemented an <b>AI-powered sales forecasting</b> project to
-                            enhance inventory planning and decision-making.</li>
-                        <li>Developed a robust <b>Data Warehouse</b> solution to capture and analyze item  movement data, empowering inventory optimization and sales analytics for better decision-making.</li>
-                        <li>Designed and implemented a <b>high-performance API Gateway</b>
-                            using KrakenD, optimizing system reliability and scalability.</li>
-                        <li>Conducted in-depth research to evaluate and recommend
-                            cutting-edge technologies, tools, and methodologies for
-                            organizational adoption.</li>
-                        <li>Established <b>platform standardization</b> initiatives, including
-                            creating project templates to ensure team consistency and
-                            efficiency.</li>
-                        <li>Developed internal tools to streamline workflows, including: Commit AI Generator and Release Management Tool</li>
-                    </ul>
-                </li>
-                <li> <div class="experience-title">
-                        <strong>Golang Instructor, Hacktiv8</strong>
-                        <span>(01/2025 - 04/2025)</span>
-                        <a href="https://hacktiv8.com" class="company-link" target="_blank">hacktiv8.com</a>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Teaching Go/Golang fundamentals, REST API best practices,
-                            and microservices development through deployment. In 2024, I also
-                            instructed at KodingGo.</li>
-                    </ul>
-                </li>
-                <li> <div class="experience-title">
-                        <strong>Backend Engineer, Waresix</strong>
-                        <span>(03/2023 - 03/2024)</span>
-                        <a href="https://waresix.com" class="company-link" target="_blank">waresix.com</a>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Optimized database queries, reducing execution time from 878.67ms to 0.66ms, enhancing app speed.</li>
-                        <li>Increased the amount of code tested from 20% to 60%,
-                            leading to more reliable and error-free software.</li> 
-                        <li>Enhanced system security to mitigate DDoS attacks.</li>   
-                    </ul>
-                </li>
-                <li> <div class="experience-title">
-                        <strong>Backend Engineer, Kumparan</strong>
-                        <span>(08/2021 - 12/2022)</span>
-                        <a href="https://kumparan.com" class="company-link" target="_blank">kumparan.com</a>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Improve the API performance to ~200ms by improving the
-                            cache mechanism.</li>
-                        <li>Increase maintainability and scalability of the services by
-                            <b>rewriting</b> the services from a monolithic architecture to a
-                            <b>microservice</b> architecture (NodeJs to Golang).</li> 
-                        <li>Save operational costs by building an in-house video
-                            transcoding and live streaming instead of using third-party.</li>   
-                        <li>Mentoring the interns and leading a small project that adds or
-                            improves the functionality of kumparan app and its services.</li>   
-                        <li>Write clean and highly-maintainable code. Building reliable
-                            and scalable services to boost the business.</li>         
-                    </ul>
-                </li>
-                <li> <div class="experience-title">
-                    <strong>Backend Engineer, Telkom Indonesia</strong>
-                    <span>(11/2020 - 08/2021)</span>
-                    <a href="https://www.telkom.co.id" class="company-link" target="_blank">telkom.co.id</a>
-                </div>
-                <ul class="bullet-list">
-                    <li>Develop Delivery Order API that processes IoT device data
-                        like geolocation, temperature, door sensor, and SOS sensor.
-                        And integrates it with the external party by utilizing Message
-                        Queue technology.</li>     
-                </ul>
-            </li>
-            </ul>
-        </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <img src="https://alramdein.github.io/assets/warehouse.png" alt="Data Warehouse Project">
-                    <div class="project-content">
-                        <h3>Data Warehouse Project</h3>
-                        <p>This Data Warehouse Project enables real-time sales and inventory data processing and classification to improve business intelligence. By leveraging Kafka, Windmill, ClickHouse, and MongoDB, it ensures seamless data ingestion, transformation, and storage. Change Data Capture (CDC) streams transactional updates into Kafka, triggering workflows that cleans and preprocess the data. Clean data is stored for analytics, while dirty data is tracked and re-processed using an AI-based classifier, with low-confidence cases flagged for review. This scalable and automated pipeline enhances data accuracy, provides real-time insights, and supports better decision-making.</p>
-                        <p class="tech-stack">Tech Stack: Typescript, Kafka, CDC, Windmill, ClickHouse, MongoDB, Python, AWS S3</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="https://alramdein.github.io/assets/forecast.png" alt="AI Sales Forecasting">
-                    <div class="project-content">
-                        <h3>AI Sales Forecasting</h3>
-                        <p> This AI Sales Forecasting project uses Python and explores multiple machine learning models, such as AutoARIMA and XGBoost, to predict future sales. The project aims to improve forecasting accuracy by experimenting with different algorithms and incorporating relevant features like discounts and quantities. There is challenge for handling multi-tenant sales forecasting, evaluating whether to use separate models per tenant or optimize a unified approach.</p>
-                        <p class="tech-stack">Tech Stack: Python, Statsforecast, PostgreSQL</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="https://alramdein.github.io/assets/merge.png" alt="Commit AI Generator">
-                    <div class="project-content">
-                        <h3>Commit AI Generator</h3>
-                        <p>Automated commit message generator based on git diffs.</p>
-                        <p class="tech-stack">Tech Stack: Golang, OpenAI API, Git Hooks</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="https://alramdein.github.io/assets/release.png" alt="Release Management Tool">
-                    <div class="project-content">
-                        <h3>Release Management Tool</h3>
-                        <p>Simplified release process for multiple teams.</p>
-                        <p class="tech-stack">Tech Stack: Python, Flask, PostgreSQL</p>
-                    </div>
-                </div>
+            .project-content {
+                flex: 1;
+            }
+
+            .tech-stack {
+                margin-top: 10px;
+                font-size: 0.9rem;
+                color: var(--primary-color);
+            }
+
+            @media (max-width: 768px) {
+                .project {
+                    flex-direction: column !important;
+                    text-align: justify;
+                }
+
+                .project:nth-child(even) {
+                    flex-direction: column !important;
+                }
+
+                .project img {
+                    margin: 0 0 10px 0 !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div>
+                <a href="#summary">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
-        </section>
+        </nav>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:ramdanialif26@gmail.com">ramdanialif26@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/alramdein" target="_blank">github.com/alramdein</a></p>
-        </section>
-        
-        <footer>
-            <p>&copy; 2025 Alif Ramdani. All rights reserved.</p>
-        </footer>
-    </div>
-    
-    <script>
-        document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default anchor click behavior
+        <div class="container">
+            <header>
+                <img
+                    src="https://alramdein.github.io/profile.jpg"
+                    alt="Alif Ramdani"
+                />
+                <h1>Alif Ramdani</h1>
+                <p>Software Engineer | Go, Typescript, Python</p>
+            </header>
 
-        const targetId = this.getAttribute('href'); // Get the target section ID
-        const targetSection = document.querySelector(targetId); // Select the target section
-        
-        // Scroll to the target section with an offset for the navbar height
-        window.scrollTo({
-            top: targetSection.offsetTop - 70, // Adjust 80 based on navbar height
-            behavior: 'smooth' // Smooth scroll behavior
-        });
-    });
-});
-    </script>
-</body>
+            <section id="summary">
+                <h2>Summary</h2>
+                <p>
+                    Enthusiastic software engineer with over 4+ years of
+                    experience, proficient in Go/Golang, Typescript, and Python.
+                    A fast-paced learner with a proven track record in building
+                    large-scale web applications and services. Experienced in
+                    architecting and developing robust microservices from
+                    scratch using PostgreSQL, Redis, Kafka, and Kubernetes.
+                    Passionate about AI-driven solutions, with hands-on
+                    experience in implementing statistical forecasting models
+                    for sales prediction. Also, an active Golang instructor,
+                    sharing knowledge and mentoring developers to deepen their
+                    expertise in Go.
+                </p>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <ul>
+                    <li>
+                        <div class="experience-title">
+                            <strong
+                                >Research & Development Engineer,
+                                Jubelio</strong
+                            >
+                            <span>(08/2024 - Present)</span>
+                            <a
+                                href="https://jubelio.com"
+                                class="company-link"
+                                target="_blank"
+                                >jubelio.com</a
+                            >
+                        </div>
+                        <ul class="bullet-list">
+                            <li>
+                                Researched and implemented an
+                                <b>AI-powered sales forecasting</b> project to
+                                enhance inventory planning and decision-making.
+                            </li>
+                            <li>
+                                Developed a robust
+                                <b>Data Warehouse</b> solution to capture and
+                                analyze item movement data, empowering inventory
+                                optimization and sales analytics for better
+                                decision-making.
+                            </li>
+                            <li>
+                                Designed and implemented a
+                                <b>high-performance API Gateway</b> using
+                                KrakenD, optimizing system reliability and
+                                scalability.
+                            </li>
+                            <li>
+                                Conducted in-depth research to evaluate and
+                                recommend cutting-edge technologies, tools, and
+                                methodologies for organizational adoption.
+                            </li>
+                            <li>
+                                Established
+                                <b>platform standardization</b> initiatives,
+                                including creating project templates to ensure
+                                team consistency and efficiency.
+                            </li>
+                            <li>
+                                Developed internal tools to streamline
+                                workflows, including: Commit AI Generator and
+                                Release Management Tool
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="experience-title">
+                            <strong>Golang Instructor, Hacktiv8</strong>
+                            <span>(01/2025 - 04/2025)</span>
+                            <a
+                                href="https://hacktiv8.com"
+                                class="company-link"
+                                target="_blank"
+                                >hacktiv8.com</a
+                            >
+                        </div>
+                        <ul class="bullet-list">
+                            <li>
+                                Teaching Go/Golang fundamentals, REST API best
+                                practices, and microservices development through
+                                deployment. In 2024, I also instructed at
+                                KodingGo.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="experience-title">
+                            <strong>Backend Engineer, Waresix</strong>
+                            <span>(03/2023 - 03/2024)</span>
+                            <a
+                                href="https://waresix.com"
+                                class="company-link"
+                                target="_blank"
+                                >waresix.com</a
+                            >
+                        </div>
+                        <ul class="bullet-list">
+                            <li>
+                                Optimized database queries, reducing execution
+                                time from 878.67ms to 0.66ms, enhancing app
+                                speed.
+                            </li>
+                            <li>
+                                Increased the amount of code tested from 20% to
+                                60%, leading to more reliable and error-free
+                                software.
+                            </li>
+                            <li>
+                                Enhanced system security to mitigate DDoS
+                                attacks.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="experience-title">
+                            <strong>Backend Engineer, Kumparan</strong>
+                            <span>(08/2021 - 12/2022)</span>
+                            <a
+                                href="https://kumparan.com"
+                                class="company-link"
+                                target="_blank"
+                                >kumparan.com</a
+                            >
+                        </div>
+                        <ul class="bullet-list">
+                            <li>
+                                Improve the API performance to ~200ms by
+                                improving the cache mechanism.
+                            </li>
+                            <li>
+                                Increase maintainability and scalability of the
+                                services by <b>rewriting</b> the services from a
+                                monolithic architecture to a
+                                <b>microservice</b> architecture (NodeJs to
+                                Golang).
+                            </li>
+                            <li>
+                                Save operational costs by building an in-house
+                                video transcoding and live streaming instead of
+                                using third-party.
+                            </li>
+                            <li>
+                                Mentoring the interns and leading a small
+                                project that adds or improves the functionality
+                                of kumparan app and its services.
+                            </li>
+                            <li>
+                                Write clean and highly-maintainable code.
+                                Building reliable and scalable services to boost
+                                the business.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="experience-title">
+                            <strong>Backend Engineer, Telkom Indonesia</strong>
+                            <span>(11/2020 - 08/2021)</span>
+                            <a
+                                href="https://www.telkom.co.id"
+                                class="company-link"
+                                target="_blank"
+                                >telkom.co.id</a
+                            >
+                        </div>
+                        <ul class="bullet-list">
+                            <li>
+                                Develop Delivery Order API that processes IoT
+                                device data like geolocation, temperature, door
+                                sensor, and SOS sensor. And integrates it with
+                                the external party by utilizing Message Queue
+                                technology.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="projects">
+                    <div class="project">
+                        <img
+                            src="https://alramdein.github.io/assets/warehouse.png"
+                            alt="Data Warehouse Project"
+                        />
+                        <div class="project-content">
+                            <h3>Data Warehouse Project</h3>
+                            <p>
+                                This Data Warehouse Project enables real-time
+                                sales and inventory data processing and
+                                classification to improve business intelligence.
+                                By leveraging Kafka, Windmill, ClickHouse, and
+                                MongoDB, it ensures seamless data ingestion,
+                                transformation, and storage. Change Data Capture
+                                (CDC) streams transactional updates into Kafka,
+                                triggering workflows that cleans and preprocess
+                                the data. Clean data is stored for analytics,
+                                while dirty data is tracked and re-processed
+                                using an AI-based classifier, with
+                                low-confidence cases flagged for review. This
+                                scalable and automated pipeline enhances data
+                                accuracy, provides real-time insights, and
+                                supports better decision-making.
+                            </p>
+                            <p class="tech-stack">
+                                Tech Stack: Typescript, Kafka, CDC, Windmill,
+                                ClickHouse, MongoDB, Python, AWS S3
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img
+                            src="https://alramdein.github.io/assets/forecast.png"
+                            alt="AI Sales Forecasting"
+                        />
+                        <div class="project-content">
+                            <h3>AI Sales Forecasting</h3>
+                            <p>
+                                This AI Sales Forecasting project uses Python
+                                and explores multiple machine learning models,
+                                such as AutoARIMA and XGBoost, to predict future
+                                sales. The project aims to improve forecasting
+                                accuracy by experimenting with different
+                                algorithms and incorporating relevant features
+                                like discounts and quantities. There is
+                                challenge for handling multi-tenant sales
+                                forecasting, evaluating whether to use separate
+                                models per tenant or optimize a unified
+                                approach.
+                            </p>
+                            <p class="tech-stack">
+                                Tech Stack: Python, Statsforecast, PostgreSQL
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img
+                            src="https://alramdein.github.io/assets/api-integration.png"
+                            alt="High-Performance API Gateway"
+                        />
+                        <div class="project-content">
+                            <h3>High-Performance API Gateway</h3>
+                            <p>
+                                Developed a cost-efficient, high-performance API
+                                Gateway to manage request routing, enhance
+                                security, and enable seamless service-to-service
+                                authentication. Customized the Lura framework to
+                                optimize request handling, ensuring minimal
+                                latency and robust security while maintaining
+                                cost efficiency.
+                            </p>
+                            <p class="tech-stack">
+                                Tech Stack: KrakenD, Go, Lura
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img
+                            src="https://alramdein.github.io/assets/structure.png"
+                            alt="Monolith to Microservices Migration"
+                        />
+                        <div class="project-content">
+                            <h3>Monolith to Microservices Migration</h3>
+                            <p>
+                                Designed and implemented scalable, maintainable
+                                microservices by transforming a monolithic
+                                Node.js application into a high-performance
+                                Go-based microservices architecture. Leveraged
+                                Redis, NATS, and PostgreSQL to build a robust
+                                distributed system, enhancing efficiency,
+                                flexibility, and reliability.
+                            </p>
+                            <p class="tech-stack">
+                                Tech Stack: Go, NATS, Redis, PostgreSQL, Docker
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img
+                            src="https://alramdein.github.io/assets/merge.png"
+                            alt="Commit AI Generator"
+                        />
+                        <div class="project-content">
+                            <h3>Commit AI Generator</h3>
+                            <p>
+                                Automated commit message generator based on git
+                                diffs.
+                            </p>
+                            <p class="tech-stack">
+                                Tech Stack: Golang, OpenAI API, Git Hooks
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img
+                            src="https://alramdein.github.io/assets/release.png"
+                            alt="Release Management Tool"
+                        />
+                        <div class="project-content">
+                            <h3>Release Management Tool</h3>
+                            <p>
+                                Simplified release process for multiple teams.
+                            </p>
+                            <p class="tech-stack">
+                                Tech Stack: Python, Flask, PostgreSQL
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>
+                    Email:
+                    <a href="mailto:ramdanialif26@gmail.com"
+                        >ramdanialif26@gmail.com</a
+                    >
+                </p>
+                <p>
+                    GitHub:
+                    <a href="https://github.com/alramdein" target="_blank"
+                        >github.com/alramdein</a
+                    >
+                </p>
+            </section>
+
+            <footer>
+                <p>&copy; 2025 Alif Ramdani. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <script>
+            document.querySelectorAll(".navbar a").forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+
+                    const targetId = this.getAttribute("href"); // Get the target section ID
+                    const targetSection = document.querySelector(targetId); // Select the target section
+
+                    // Scroll to the target section with an offset for the navbar height
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70, // Adjust 80 based on navbar height
+                        behavior: "smooth", // Smooth scroll behavior
+                    });
+                });
+            });
+        </script>
+    </body>
 </html>
