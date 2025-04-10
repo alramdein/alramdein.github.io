@@ -239,6 +239,29 @@
                     margin: 0 0 10px 0 !important;
                 }
             }
+            
+            .btn-download-cv {
+                display: inline-block;
+                background-color: #4CAF50; /* Green */
+                color: white;
+                padding: 10px 20px;
+                margin-top: 10px;
+                text-decoration: none;
+                border-radius: 6px; /* Slightly rounded */
+                font-weight: bold;
+                transition: transform 0.1s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            
+            .btn-download-cv:hover {
+                background-color: #45a049;
+                text-decoration: none; /* No underline on hover */
+            }
+            
+            .btn-download-cv:active {
+                transform: scale(0.96);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }            
         </style>
     </head>
     <body>
@@ -258,6 +281,12 @@
                 />
                 <h1>Alif Ramdani</h1>
                 <p>Software Engineer | Go, Typescript, Python</p>
+                <a href="https://drive.google.com/drive/folders/1-CVuJnF5i7NmDqmnbsmsRkCNMyolmorw?usp=sharing" 
+                    class="btn-download-cv" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    📄 Download CV
+                </a>
             </header>
 
             <section id="summary">
